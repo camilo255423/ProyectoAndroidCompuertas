@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/AbsoluteLayout1"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
-    <ImageView 
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
- 	android:src="@drawable/and_figure"       
-        
-        />
+    android:layout_height="match_parent" >
 
-</LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/and_figure" />
+    
+    <View
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:layout_x="50dp"
+        android:layout_y="17dp"
+        android:background="@drawable/circulo" />
+
+    <EditText 
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:layout_x="50dp"
+        android:layout_y="17dp"
+        
+        android:text="AAAA"
+        />
+</AbsoluteLayout>

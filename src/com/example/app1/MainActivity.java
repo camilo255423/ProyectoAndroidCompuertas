@@ -16,14 +16,17 @@ public class MainActivity extends ActionBarActivity {
     float iniTop;
     
     View activa=null;
-    And a1;
+    And a1,a2,a3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         a1 = (And) this.findViewById(R.id.and1);
+        a2 = (And) this.findViewById(R.id.and2);
+        a3 = (And) this.findViewById(R.id.and3);
         a1.ma = this;
-        
+        a2.ma = this;
+        a3.ma = this;
     }
 
 
