@@ -8,7 +8,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.LinearLayout;
 
-public class And extends LinearLayout {
+public class And extends Compuerta {
 public	MainActivity ma;
 	public And(Context context, AttributeSet attrs) {
 		super(context, attrs);
