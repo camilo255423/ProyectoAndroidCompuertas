@@ -16,6 +16,7 @@
         android:layout_height="wrap_content"
         android:text="COMPAQ" />
 
+    
     <com.example.app1.And
         android:id="@+id/and1"
         android:layout_width="wrap_content"
@@ -28,5 +29,12 @@
         android:id="@+id/and3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-
+    <com.example.app1.Conexion 
+        
+           android:id="@+id/conex1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        />
 </LinearLayout>
