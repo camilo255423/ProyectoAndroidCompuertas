@@ -16,8 +16,9 @@ public class Conexion {
 
 	public void graficar(Canvas canvas, Paint paint)
 	{
-		canvas.drawLine(puntoFinal.x-30, puntoFinal.y-160,
-				puntoInicial.x-45, puntoInicial.y-160, paint);
+		int offSetY=130;
+		canvas.drawLine(puntoFinal.x, puntoFinal.y-offSetY,
+				puntoInicial.x, puntoInicial.y-offSetY, paint);
 	}
 
 }

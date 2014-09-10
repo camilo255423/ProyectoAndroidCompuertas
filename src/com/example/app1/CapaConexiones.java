@@ -23,13 +23,14 @@ public class CapaConexiones extends View{
 		// TODO Auto-generated constructor stub
 		this.setDrawingCacheEnabled(true);
 		bitmap = this.getDrawingCache(true);
-		paint.setStrokeWidth(14);
+		paint.setStrokeWidth(10);
 		paint.setColor(Color.parseColor(Conector.COLOR_CONEXION));
 	}
 	@Override
 	protected void onDraw(Canvas canvas) {
 		// TODO Auto-generated method stub
 		super.onDraw(canvas);
+		
 		for (Conexion conexion:conexiones)
 		{
 			conexion.graficar(canvas, paint);
@@ -46,8 +47,16 @@ public class CapaConexiones extends View{
 	}
 	public void conectar(ConectorSalida origen, ConectorEntrada destino)
 	{
-		this.conexiones.add(new Conexion(new Point((int)origen.globalX,(int)origen.globalY),
-										 new Point((int)destino.globalX,(int)destino.globalY)));
+		int[] locationOrigen = new int[2];
+		int[] locationDestino = new int[2];
+		
+	    origen.getLocationInWindow(locationOrigen);
+	    destino.getLocationInWindow(locationDestino);
+	    Log.v("location origen", "location origen"+locationOrigen[0]+" "+locationOrigen[1]);
+	    Log.v("location destino", "location destino"+locationDestino[0]+" "+locationDestino[1]);
+	    this.conexiones.add(new Conexion(new Point(locationOrigen[0],locationOrigen[1]),
+										 new Point(locationDestino[0],locationDestino[1])));
 		this.invalidate();
+	
 	}
 }
