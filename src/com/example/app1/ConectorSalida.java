@@ -19,16 +19,21 @@ public class ConectorSalida extends Conector{
 	public boolean onTouchEvent(MotionEvent event) {
 		// TODO Auto-generaethod stub
 		
+		 if(this.conectado) return super.onTouchEvent(event);	
+		 this.globalX=event.getRawX();
+		 this.globalY=event.getRawY();
 		switch(event.getAction())
 		{
 		
 		case MotionEvent.ACTION_DOWN:
+	if(ElementoActivo.conectorActivo==null)
+	{	
 		if(!this.conectado)
 		{
 			this.setConectado(true);
 			ElementoActivo.conectorActivo=this;
 		}
-			
+	}		
 			break;
 		 	
 		}

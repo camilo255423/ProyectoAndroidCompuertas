@@ -13,11 +13,14 @@ import android.widget.TextView;
 
 public class Conector extends LinearLayout{
 	TextView valor;
+	float globalX;
+	float globalY;
 	GradientDrawable fondo;
 	boolean conectado=false;
 	public static String COLOR_UNO="#088A08";
 	public static String COLOR_CERO="#B40404";
-	public static String COLOR_CONEXION="#756B6B";
+//	public static String COLOR_CONEXION="#756B6B";
+	public static String COLOR_CONEXION="#000000";
 	public static String COLOR_SIN_CONEXION="#FFFFFF";
 	
 	
@@ -41,7 +44,7 @@ public class Conector extends LinearLayout{
 		else
 		this.fondo.setColor(Color.parseColor(COLOR_SIN_CONEXION));	
 	}
-	
+
 	
 
 }
