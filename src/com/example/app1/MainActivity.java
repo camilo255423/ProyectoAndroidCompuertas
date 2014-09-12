@@ -1,6 +1,8 @@
 package com.example.app1;
 
 import android.support.v7.app.ActionBarActivity;
+import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -21,9 +23,10 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ElementoActivo.capaConexiones = (CapaConexiones) this.findViewById(R.id.capaConexiones);
         
     }
-
+   
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

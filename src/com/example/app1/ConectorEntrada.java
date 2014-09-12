@@ -22,11 +22,14 @@ public class ConectorEntrada extends Conector {
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
 		// TODO Auto-generaethod stub
-		
+		 if(this.conectado) return super.onTouchEvent(event);
+		 this.globalX=event.getRawX();
+		 this.globalY=event.getRawY();
 		switch(event.getAction())
 		{
 		
 		case MotionEvent.ACTION_DOWN:
+	   
 		if(ElementoActivo.conectorActivo==null)
 		{	
 			if(this.valor.getText().toString().equals("1"))
@@ -44,6 +47,7 @@ public class ConectorEntrada extends Conector {
 		else
 		{
 			this.setConectado(true);
+			ElementoActivo.capaConexiones.conectar((ConectorSalida)ElementoActivo.conectorActivo, this);
 			ElementoActivo.conectorActivo=null;
 		}
 		}
