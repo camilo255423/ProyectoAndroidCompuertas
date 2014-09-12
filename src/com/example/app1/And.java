@@ -16,25 +16,5 @@ public	MainActivity ma;
 		LayoutInflater  mInflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         mInflater.inflate(R.layout.and, this, true);
 	}
-	@Override
-	public boolean onTouchEvent(MotionEvent event) {
-		// TODO Auto-generaethod stub
-		
-		switch(event.getAction())
-		{
-		case MotionEvent.ACTION_UP:
-		//	ma = (MainActivity)this.getParent();
-			ma.activa = null;
-			
-			break;
-		case MotionEvent.ACTION_DOWN:
-		//	ma = (MainActivity)this.getParent();
-			
-			ma.activa = this;
-			break;
-		 	
-		}
-		return super.onTouchEvent(event);
-	}
-
+	
 }

@@ -21,12 +21,7 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        a1 = (And) this.findViewById(R.id.and1);
-        a2 = (And) this.findViewById(R.id.and2);
-        a3 = (And) this.findViewById(R.id.and3);
-        a1.ma = this;
-        a2.ma = this;
-        a3.ma = this;
+        
     }
 
 
@@ -55,30 +50,12 @@ public class MainActivity extends ActionBarActivity {
 		switch(event.getAction())
 		{
 		case MotionEvent.ACTION_MOVE:
-			if(this.activa!=null)
-			{	
-			activa.setX(iniLeft+(event.getX()-iniX));
-		    activa.setY(iniTop+(event.getY()-iniY));
-			}
-			Log.v("posicion","posicion"+(iniTop+(event.getY()-iniY)));
 			break;
 		case MotionEvent.ACTION_DOWN:
-			if(this.activa!=null)
-			{	
-			iniY = event.getY();
-			iniX = event.getX();
-			iniLeft = activa.getX();
-			iniTop = activa.getY();
-			}
+			
 			break;
 		case MotionEvent.ACTION_UP:
-			if(this.activa!=null)
-			{
-				activa.setX(iniLeft+(event.getX()-iniX));
-			    activa.setY(iniTop+(event.getY()-iniY));
-				
-				return false;
-			}
+			
 			break;
 		
 		
