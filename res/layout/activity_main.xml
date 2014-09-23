@@ -10,6 +10,14 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.app1.MainActivity" >
 
+    
+    <com.example.app1.CapaConexiones
+        android:id="@+id/capaConexiones"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp" />
+    
 <GridLayout 
     android:id="@+id/GridLayout1"
     android:layout_width="match_parent"
@@ -57,11 +65,5 @@
      </com.example.app1.And>
 </GridLayout>
 
-    <com.example.app1.CapaConexiones
-        android:id="@+id/capaConexiones"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="0dp" />
 
 </RelativeLayout>

@@ -1083,7 +1083,7 @@ containing a value of this type.
         public static final int ic_launcher=0x7f02005a;
     }
     public static final class id {
-        public static final int GridLayout1=0x7f05003d;
+        public static final int GridLayout1=0x7f05003e;
         public static final int ImageView1=0x7f05003f;
         public static final int RelativeLayout1=0x7f05003c;
         public static final int TextViewValor=0x7f050044;
@@ -1103,7 +1103,7 @@ containing a value of this type.
         public static final int activity_chooser_view_content=0x7f050025;
         public static final int always=0x7f05000b;
         public static final int beginning=0x7f050011;
-        public static final int capaConexiones=0x7f05003e;
+        public static final int capaConexiones=0x7f05003d;
         public static final int checkbox=0x7f05002d;
         public static final int collapseActionView=0x7f05000d;
         public static final int default_activity_button=0x7f050028;
