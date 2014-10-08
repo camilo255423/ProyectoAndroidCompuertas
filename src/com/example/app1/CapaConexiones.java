@@ -9,6 +9,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Point;
 import android.util.AttributeSet;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -18,6 +19,7 @@ public class CapaConexiones extends View{
 	private Bitmap bitmap;
 	ArrayList<Conexion> conexiones = new ArrayList<Conexion>();
 	Paint paint = new Paint();
+	public int offsetY;
 	public CapaConexiones(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		// TODO Auto-generated constructor stub
@@ -51,11 +53,10 @@ public class CapaConexiones extends View{
 		int[] locationDestino = new int[2];
 		
 	    origen.getLocationInWindow(locationOrigen);
-	    destino.getLocationInWindow(locationDestino);
-	    Log.v("location origen", "location origen"+locationOrigen[0]+" "+locationOrigen[1]);
-	    Log.v("location destino", "location destino"+locationDestino[0]+" "+locationDestino[1]);
-	    this.conexiones.add(new Conexion(new Point(locationOrigen[0],locationOrigen[1]),
-										 new Point(locationDestino[0],locationDestino[1])));
+	    destino.getLocationOnScreen(locationDestino);
+	
+	    this.conexiones.add(new Conexion(new Point(locationOrigen[0],locationOrigen[1]-this.offsetY),
+										 new Point(locationDestino[0],locationDestino[1]-this.offsetY)));
 		this.invalidate();
 	
 	}

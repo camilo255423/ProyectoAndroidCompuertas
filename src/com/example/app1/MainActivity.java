@@ -4,11 +4,14 @@ import android.support.v7.app.ActionBarActivity;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.GridLayout;
+import android.widget.RelativeLayout;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -16,7 +19,7 @@ public class MainActivity extends ActionBarActivity {
     float iniX;
     float iniLeft;
     float iniTop;
-    
+    RelativeLayout mainScreen;
     View activa=null;
     And a1,a2,a3;
     @Override
@@ -25,8 +28,19 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
         ElementoActivo.capaConexiones = (CapaConexiones) this.findViewById(R.id.capaConexiones);
         
+        this.mainScreen =  (RelativeLayout) this.findViewById(R.id.RelativeLayout1);
+        
     }
-   
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+    	DisplayMetrics displayMetrics = new DisplayMetrics();
+	    getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+	    
+    	ElementoActivo.capaConexiones.offsetY = displayMetrics.heightPixels - mainScreen.getMeasuredHeight();
+   	    //Log.v("offsetY", "offsetY"+ElementoActivo.capaConexiones.offsetY);
+        
+        super.onWindowFocusChanged(hasFocus);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
